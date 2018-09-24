@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="77dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="35dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnViewAll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/delete" />
+
+    <ImageButton
+        android:id="@+id/btnAdd"
+        android:layout_width="77dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="40dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnViewAll"
+        app:srcCompat="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/imgViewBook"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/imgViewClock"
+        app:layout_constraintEnd_toStartOf="@+id/txtSubject"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/books" />
+
+    <ImageView
+        android:id="@+id/imgViewClock"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/app_name"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btnReset"
+        app:layout_constraintEnd_toStartOf="@+id/txtHours"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewBook"
+        app:srcCompat="@drawable/clock" />
+
+    <ImageButton
+        android:id="@+id/btnReset"
+        android:layout_width="67dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="151dp"
+        android:layout_marginEnd="323dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="49dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/btnDelete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewClock"
+        app:srcCompat="@drawable/reset" />
+
+    <EditText
+        android:id="@+id/txtSubject"
+        android:layout_width="246dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="49dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:background="#fff944"
+        android:ems="10"
+        android:inputType="text"
+        android:lineSpacingExtra="22dp"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="22sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/txtHours"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgViewBook"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/txtHours"
+        android:layout_width="246dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="220dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginStart="16dp"
+        android:background="#fff944"
+        android:ems="10"
+        android:inputType="number"
+        android:lineSpacingExtra="22dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtSum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgViewClock"
+        app:layout_constraintTop_toBottomOf="@+id/txtSubject"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/txtSum"
+        android:layout_width="76dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginStart="154dp"
+        android:text="@string/_0"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/btnViewAll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnViewAll"
+        android:layout_width="77dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAdd"
+        app:layout_constraintStart_toEndOf="@+id/btnDelete"
+        app:srcCompat="@drawable/bookholder" />
+
+</android.support.constraint.ConstraintLayout>
